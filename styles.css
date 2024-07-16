@@ -7,6 +7,7 @@ body {
 }
 
 .container {
+  font-family: "Satoshi", sans-serif;
   color: white;
   display: flex;
   justify-content: center;
