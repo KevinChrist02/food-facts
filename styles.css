@@ -16,6 +16,12 @@ body {
   gap: 4vh;
 }
 
+h1 {
+  font-weight: bold;
+  font-size: 10vh;
+  font-family: "Boxing", sans-serif;
+}
+
 input,
 button {
   padding: 1.8vw;
@@ -34,6 +40,12 @@ input:hover {
   color: white;
   box-shadow: 2vw 3vh 0 black;
 }
+input::placeholder {
+  color: black;
+}
+input:hover::placeholder {
+  color: white;
+}
 
 button:hover {
   background-color: rgba(63, 94, 251, 1);
@@ -41,3 +53,8 @@ button:hover {
   box-shadow: 2vw 3vh 0 black;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
