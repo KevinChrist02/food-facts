@@ -1,4 +1,5 @@
 async function fetchData() {
+  const container = document.getElementById("product");
   const errorMessage = document.getElementById("error");
   const productName = document.getElementById("productName");
   const gradeHeading = document.getElementById("gradeHeading");
@@ -22,7 +23,13 @@ async function fetchData() {
 
     // Nutriscore grade of the Product
     gradeHeading.textContent = "Nutriscore Grade:";
-    nutriGrade.textContent = data.product.nutriscore_grade || "Not available";
+    nutriGrade.textContent = (
+      data.product.nutriscore_grade || "Not available"
+    ).toUpperCase();
+
+    // deleting and adding classes to make the container visible on runtime
+    container.classList.remove("hidden");
+    container.classList.add("visible");
   } catch (error) {
     console.error(error);
     productName.textContent = "";

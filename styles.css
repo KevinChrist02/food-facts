@@ -1,3 +1,7 @@
+* {
+  font-family: "Satoshi", sans-serif;
+}
+
 body {
   background: radial-gradient(
     circle,
@@ -7,7 +11,6 @@ body {
 }
 
 .container {
-  font-family: "Satoshi", sans-serif;
   color: white;
   display: flex;
   justify-content: center;
@@ -36,11 +39,45 @@ button {
   text-decoration: none;
 }
 
-input:hover {
+#product {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2.4vh;
+  width: 30vw;
+  margin: 0 auto;
+  background-color: white;
+  border: 0.2vw solid black;
+  border-radius: 12vw;
+  box-shadow: 1vw 2vh 0 black;
+  transition: ease-in-out 0.25s;
+}
+#nutriScore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+  font-weight: bold;
+}
+#error {
+  text-align: center;
+  position: absolute;
+  font-weight: bold;
+}
+
+#product:hover {
   background-color: rgba(252, 70, 107, 1);
   color: white;
   box-shadow: 2vw 3vh 0 black;
 }
+
+input[type="number"]:hover {
+  background-color: rgba(252, 70, 107, 1);
+  color: white;
+  box-shadow: 2vw 3vh 0 black;
+}
+
 input::placeholder {
   color: black;
 }
@@ -58,4 +95,13 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+/*rendering of the style on runtime with the js DOM*/
+.hidden {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.visible {
+  opacity: 1;
 }
